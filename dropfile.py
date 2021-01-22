@@ -1,7 +1,7 @@
 from pathlib import Path
 
 
-def get_file_path():
+def get():
     """
     Gets file/directory via drag and drop and return a Path object.
 
@@ -13,18 +13,18 @@ def get_file_path():
     used to get file path, filname, extension, etc. 
 
     Sample Usage:
-    - p = get_file_path()
+    - p = dropfile.get()
         - p = full path
         - p.parent = parent folder
         - p.stem = filename excluding extension
         - p.suffix = file extension
     """
     
-    # get input file and strip characters
+    # Get input file/folder and strip characters
     f = input('\n Drop File: ')
     f = f.strip(" &'\"")
     f = f.replace("\ ", " ")
     # set Path object and return
-    p = Path(f)
+    p = Path(f).resolve()
     return p
     
