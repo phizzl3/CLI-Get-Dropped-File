@@ -1,4 +1,4 @@
-# cli-get-file
+# CLI-dropfile
 
 A simple way to get a filepath/pathlib.Path object via drag and drop in python3 CLI scripts.
 
@@ -14,7 +14,7 @@ A simple way to get a filepath/pathlib.Path object via drag and drop in python3 
 
 Sample Usage:
 
-* p = get_file_path()
+* p = dropfile.get()
   * p = full path
   * p.parent = parent folder
   * p.stem = filename excluding extension
@@ -22,10 +22,10 @@ Sample Usage:
 
 ```py
 # import the function
-from getfile import get_file_path
+import dropfile
 
 # call it and assign your filepath (pathlib.Path object)
-my_file = get_file_path()
+my_file = dropfile.get()
 
 # use Path methods, etc on your object
 print(my_file.stem)  # 'testfile'
