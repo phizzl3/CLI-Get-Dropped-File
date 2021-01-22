@@ -1,7 +1,7 @@
 from pathlib import Path
 
 
-def get_file_path():
+def get():
     """
     Gets file/directory via drag and drop and return a Path object.
 
@@ -25,6 +25,6 @@ def get_file_path():
     f = f.strip(" &'\"")
     f = f.replace("\ ", " ")
     # set Path object and return
-    p = Path(f)
+    p = Path(f).resolve()
     return p
     
