@@ -9,24 +9,20 @@ A simple way to get a filepath/pathlib.Path object via drag and drop in python3 
 
  Returns:
 
-* (pathlib.PosixPath object): A pathlib.PosixPath object that can be 
-    used to get file path, filname, extension, etc. 
+* (pathlib.PosixPath object): A pathlib.PosixPath object that can be used to get file path, filname, extension, etc.  
 
-Sample Usage:
-
-* p = dropfile.get()
-  * p = full path
-  * p.parent = parent folder
-  * p.stem = filename excluding extension
-  * p.suffix = file extension
+## Sample Usage:
 
 ```py
-# import the function
+# Import the module
 import dropfile
 
-# call it and assign your filepath (pathlib.Path object)
-my_file = dropfile.get()
+# Call it and assign your filepath (pathlib.Path object)
+p = dropfile.get()
 
 # use Path methods, etc on your object
-print(my_file.stem)  # 'testfile'
+print(p)  # 'C:\somefolder\testfile.pdf'
+print(p.parent)  # 'C:\somefolder'
+print(p.stem)  # 'testfile'
+print(p.suffix)  # '.pdf'
 ```
