@@ -2,14 +2,18 @@
 
 A simple way to get a filepath/pathlib.Path object via drag and drop in python3 CLI scripts.
 
- Gets file/directory via drag and drop and return a Path object.
+Gets file/directory via drag and drop and return a Path object.
 
- Asks for file or directory via drag and drop, strips unneeded characters,
- and uses pathlib.Path to return a Path object.
+Asks for file or directory via drag and drop, strips unneeded characters,
+and uses pathlib.Path to return a Path object.
 
- Returns:
+Returns:
 
 * (pathlib.PosixPath object): A pathlib.PosixPath object that can be used to get file path, filname, extension, etc.  
+
+Issues:  
+
+* Macs don't like filenames that include the { ' } character.  
 
 ## Sample Usage:
 
