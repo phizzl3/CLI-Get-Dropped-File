@@ -1,4 +1,4 @@
-# 01.22.2021
+# 10.29.2021
 
 from pathlib import Path
 
@@ -21,12 +21,15 @@ def get():
         - p.stem = filename excluding extension
         - p.suffix = file extension
     """
-    
     # Get input file/folder and strip characters
-    f = input('\n Drop File: ')
-    f = f.strip(" &'\"")
-    f = f.replace("\ ", " ")
-    # set Path object and return
-    p = Path(f).resolve()
-    return p
-    
+    file_drop = input("\n Drop File: ")
+
+    # Clean left and right characters
+    file_drop = file_drop.strip(" &'\"")
+
+    # Clean Windows character issues inside string
+    file_drop = file_drop.replace("\ ", " ")
+    file_drop = file_drop.replace("''", "'")
+
+    # Set Path object and return
+    return Path(file_drop).resolve()
