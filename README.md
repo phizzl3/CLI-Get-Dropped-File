@@ -15,14 +15,14 @@ Issues:
 
 * Macs don't like filenames that include the { ' } character.  
 
-## Sample Usage:
+## Sample Usage
 
 ```py
 # Import the module
-import dropfile
+from dropped_file_getter import get_dropped_file
 
 # Call it and assign your filepath (pathlib.Path object)
-p = dropfile.get()
+p = get_dropped_file()
 
 # use Path methods, etc on your object
 print(p)  # 'C:\somefolder\testfile.pdf'
