@@ -9,7 +9,7 @@ and uses pathlib.Path to return a Path object.
 
 Returns:
 
-* (pathlib.PosixPath object): A pathlib.PosixPath object that can be used to get file path, filname, extension, etc.  
+* (pathlib.PosixPath object): A pathlib.PosixPath object that can be used to get file path, filename, extension, etc.  
 
 Issues:  
 
@@ -19,10 +19,10 @@ Issues:
 
 ```py
 # Import the module
-from dropped_file_getter import get_dropped_file
+from dropfile import getfile
 
 # Call it and assign your filepath (pathlib.Path object)
-p = get_dropped_file()
+p = getfile()
 
 # use Path methods, etc on your object
 print(p)  # 'C:\somefolder\testfile.pdf'
