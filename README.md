@@ -11,18 +11,14 @@ Returns:
 
 * (pathlib.PosixPath object): A pathlib.PosixPath object that can be used to get file path, filename, extension, etc.  
 
-Issues:  
-
-* Macs don't like filenames that include the { ' } character.  
-
 ## Sample Usage
 
 ```py
 # Import the module
-from dropfile import getfile
+from dropfile import get_dropped_file
 
 # Call it and assign your filepath (pathlib.Path object)
-p = getfile()
+p = get_dropped_file()
 
 # use Path methods, etc on your object
 print(p)  # 'C:\somefolder\testfile.pdf'
